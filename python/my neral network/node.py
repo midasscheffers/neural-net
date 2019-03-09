@@ -19,7 +19,7 @@ class Node:
             
             output = max(0, output)
             self.output = output
-            print(self.output)
+            return (self.output)
         except:
             print("weights and inputs should be the same lenght")
 
