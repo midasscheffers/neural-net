@@ -1,12 +1,20 @@
-from node import *
 from network import *
-import random as r
+
+net = Network([20, 10, 10, 100, 300, 20, 10])
+
+net.run()
+
+
+# import random as r
 
 # def generate_rand_weights(nummber_of_items):
 #     rand_list = []
 #     for i in range(nummber_of_items):
 #         rand_list.append(r.random())
 #     return rand_list
+
+
+# from node import *
 
 # nummber_of_inp_nodes = 20
 
@@ -25,7 +33,3 @@ import random as r
 # n3 = Node([n1, n2], [1,-1], 0)
 
 # n3.calc_output()
-
-net = Network([20, 10, 10, 100, 300, 20, 10])
-
-net.run()
