@@ -1,9 +1,22 @@
 from network import *
+print("\n")
 
-net = Network([20, 10, 10, 100, 300, 20, 10])
 
+net = Network([784, 100, 100, 10])
+
+
+# loop (img / batch size)
+# bacht loop (batch size)
 net.run()
+net.calc_cost(1)
+#\batch loop
+net.change_net_weights()
+#\loop
 
+
+
+
+## program to show how nodes work
 
 # import random as r
 

@@ -5,6 +5,8 @@ class Node:
         self.inputs = inputs
         self.weights = weights
         self.output = output
+        self.change = []
+        self.dis_outpt = 0
 
     def calc_output(self):
         temp_list = []
@@ -19,10 +21,18 @@ class Node:
             
             output = max(0, output)
             self.output = output
-            return (self.output)
         except:
             print("weights and inputs should be the same lenght")
+    
 
-        
+    def avr_change(self):
+        avr = 0
+        for i in range(len(self.change)):
+            for j in range(len(self.change[i])):
+                avr += self.change[i][j]
+            avr = avr / len(self.change[i])
+            self.change[i] = avr
     
-    
+    def change_weights(self):
+        for i in range(len(self.weights)):
+            self.weights[i] = self.change[i]
